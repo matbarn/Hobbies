@@ -111,4 +111,29 @@ h4 {
     box-shadow: 1px 2px 0px 3px #8dc3e7;   
 }
 
+
+.tile:hover {
+    animation: shadow ease-in-out 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shadow {
+    0%{box-shadow: 1px 2px 0px 3px #0a1014;}
+    100%{box-shadow: 1px 2px 0px 3px  #8dc3e7;}
+}
+
+.tile:active {
+    transform: scale(1.01); 
+    box-shadow: 1px 2px 0px 3px #e8f167;   
+}
+
+.tile:active {
+    animation: active-shadow ease-in-out 1ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes active-shadow {
+    0%{box-shadow: 1px 2px 0px 3px #8dc3e7;}
+    100%{box-shadow: 1px 2px 0px 3px  #e8f167;}
+}
 }
