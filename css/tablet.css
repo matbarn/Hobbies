@@ -1,5 +1,40 @@
 @media screen and (max-width: 900px) {
 
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #8dc3e7;
+    border-bottom: 16px solid #e8f167;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    -webkit-animation: spin 3s linear;
+    animation: spin 2s linear;
+    transform: scale(0);
+    z-index: 1;
+    }
+    
+    @keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+    }
+    
+
+body {
+    animation: fade_in 800ms ease-in;
+}
+
+@keyframes fade_in {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+    
 
 
 * {
@@ -19,9 +54,31 @@ header {
     margin-bottom: 20px;
 }
 
+header {
+    animation: grow ease-in-out 2s;
+    animation-fill-mode: forwards;
+    transform: scaleX(1);
+}
+
+
+@keyframes grow {
+    0%{scaleX:(0);}  
+    100%{scaleX:(1);}
+}
+
+@keyframes grow {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+
 h4 {
     font-size: 60px;
     color: #50a7e0;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
 
 }
 

@@ -1,5 +1,17 @@
 @media screen and (max-width: 600px) {
 
+body {
+    animation: fade_in 800ms ease-in;
+}
+
+@keyframes fade_in {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 
 * {
@@ -19,10 +31,12 @@ header {
     margin-bottom: 20px;
 }
 
+
 h4 {
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     color: #50a7e0;
+
 
 }
 
@@ -109,9 +123,9 @@ h4 {
     box-shadow: -1px 3px 7px 0px #acb2b7;
 }
 
-.tile:hover {
+.tile:active {
     transform: scale(1.01); 
-    box-shadow: 1px 2px 0px 3px #8dc3e7;   
+    box-shadow: 1px 2px 0px 3px #e8f167;   
 }
 
 }

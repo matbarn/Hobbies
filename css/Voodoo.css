@@ -1,14 +1,54 @@
 @media screen and (min-width: 900px) {
 
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #8dc3e7;
+    border-bottom: 16px solid #e8f167;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 45.5%;
+    animation-delay: 600ms;
+    -webkit-animation: spin 3s linear ;
+    animation: spin 2s linear;
+    transform: scale(0);
+    z-index: 1;
+}
+    
+@keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}    
+
+/*body {
+    animation: fade_in 600ms ease-in;
+}
+
+@keyframes fade_in {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}*/
+    
+a:visited {
+    color: #000;
+}
 
 
 * {
     font-family: 'Roboto', sans-serif;
 }
-a {
-    text-decoration: none;
-    color: #000;
-}    
+
+.tile_name:hover {
+    transform: scale(1.1) 
+}
+
+
 body {
     background-color: #50a7e0;
 }
@@ -20,11 +60,33 @@ header {
     justify-content: center;
     border-radius: 30px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+header {
+    animation: grow ease-in-out 1.5s;
+    animation-fill-mode: forwards;
+    transform: scaleX(1);
+}
+
+
+@keyframes grow {
+    0%{scaleX:(0);}  
+    100%{scaleX:(1);}
+}
+
+@keyframes grow {
+    0%{width: 0%;}
+    100%{width: 100%;}
 }
 
 h4 {
     font-size: 60px;
     color: #50a7e0;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
 
 }
 
@@ -82,6 +144,14 @@ h4 {
     border-color: #d3d3d3;
 }
 
+.tile:hover {
+    transform: scale(1.5); 
+    box-shadow: 1px 2px 0px 3px #8dc3e7; 
+    z-index: 1;  
+
+}
+
+
 .voodoo {
     flex: 1;
     
@@ -91,7 +161,7 @@ h4 {
     position: relative;
     color: #000;
     font-weight: bold;
-    background-color: #f2f2f2a9;
+    background-color: #8dc3e7;
     border-radius: 30px;
     padding-right: 20px;
     padding-left: 20px;
@@ -112,14 +182,9 @@ h4 {
     box-shadow: -1px 3px 7px 0px #acb2b7;
 }
 
-.tile:hover {
-    transform: scale(1.5); 
-    box-shadow: 1px 2px 0px 3px #8dc3e7; 
-    z-index: 1;  
-
-}
 
 .jump {
+    color: #000;
     background-color: #f2f2f2a9;
     padding-left: 10px;
     padding-right: 10px;
@@ -128,6 +193,10 @@ h4 {
     border-radius: 15px;
     position: fixed;
     bottom: 0;
+}
+
+.jump:hover {
+    transform: scale(1.1);
 }
 
 }
