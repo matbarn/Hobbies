@@ -116,6 +116,7 @@ h4 {
     margin-bottom: 15px;
     padding: 3px;
     border-radius: 5px;
+    box-shadow: 2px 2px 0px 0px #acb2b7;
 }
 
 .tile {
@@ -168,12 +169,13 @@ h4 {
 
 
 .tile:hover {
-    animation: shadow ease-in-out 500ms;
+    animation: shadow ease-in-out 1s infinite;
     animation-fill-mode: forwards;
 }
 
 @keyframes shadow {
-    0%{box-shadow: 1px 2px 0px 3px #0a1014;}
+    0%{box-shadow: 1px 2px 0px 3px #e8f167;}
+    50%{box-shadow: 2px 2px 8px 0px #e8f167;}
     100%{box-shadow: 1px 2px 0px 3px  #8dc3e7;}
 }
 

@@ -44,11 +44,6 @@ a:visited {
     font-family: 'Roboto', sans-serif;
 }
 
-.tile_name:hover {
-    transform: scale(1.1) 
-}
-
-
 body {
     background-color: #50a7e0;
 }
@@ -144,11 +139,19 @@ h4 {
     border-color: #d3d3d3;
 }
 
+
 .tile:hover {
     transform: scale(1.5); 
     box-shadow: 1px 2px 0px 3px #8dc3e7; 
     z-index: 1;  
+    animation: active-shadow ease-in-out 600ms;
+    animation-fill-mode: forwards;
+}
 
+@keyframes active-shadow {
+    0%{box-shadow: 1px 2px 0px 3px #e8f167;}
+    70%{box-shadow: 2px 2px 8px 0px #e8f167;}
+    100%{box-shadow: 1px 2px 0px 3px  #8dc3e7;}
 }
 
 
@@ -170,7 +173,26 @@ h4 {
     position: absolute;
     top: 20px;
     left: 20px;
+    box-shadow: 2px 2px 8px 0px #acb2b7;
 }
+
+.tile_name:hover {
+    box-shadow: 2px 2px 8px 0px #e8f167;
+    transform: scale(1.1) 
+}
+
+.tile_name:hover {
+    animation: shadow ease-in-out 1s infinite;
+    animation-fill-mode: forwards;
+    transform: scale(1.1)
+}
+
+@keyframes shadow {
+    0%{box-shadow: 1px 2px 0px 3px #e8f167;}
+    70%{box-shadow: 2px 2px 8px 0px #e8f167;}
+    100%{box-shadow: 1px 2px 0px 3px  #e8f167;}
+}
+
 
 .thumbnail {
     flex: 1;
@@ -193,10 +215,18 @@ h4 {
     border-radius: 15px;
     position: fixed;
     bottom: 0;
+    box-shadow: 2px 2px 8px 0px #acb2b7;
 }
 
 .jump:hover {
-    transform: scale(1.1);
+    animation: push_shadow ease-in-out 1s infinite;
+    animation-fill-mode: forwards;
+    transform: scale(1.1)
 }
 
+@keyframes push_shadow {
+0%{box-shadow: 1px 2px 0px 3px #e8f167;}
+70%{box-shadow: 2px 2px 8px 0px #e8f167;}
+100%{box-shadow: 1px 2px 0px 3px  #e8f167;}
+}
 }
