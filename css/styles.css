@@ -10,15 +10,15 @@
     position: absolute;
     top: 50%;
     left: 45.5%;
-    -webkit-animation: spin 3s linear;
+    animation: spin 3s linear;
     animation: spin 2s linear;
     transform: scale(0);
     z-index: 1;
     }
     
     @keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
     }
 
 body {
@@ -54,13 +54,7 @@ header {
 header {
     animation: grow ease-in-out 1.5s;
     animation-fill-mode: forwards;
-    transform: scaleX(1);
-}
-
-
-@keyframes grow {
-    0%{scaleX:(0);}  
-    100%{scaleX:(1);}
+    
 }
 
 @keyframes grow {

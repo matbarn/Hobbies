@@ -18,8 +18,8 @@
 }
         
 @keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
 }    
     
 * {
@@ -46,14 +46,9 @@ header {
 header {
     animation: grow ease-in-out 1.5s;
     animation-fill-mode: forwards;
-    transform: scaleX(1);
 }
 
 
-@keyframes grow {
-    0%{scaleX:(0);}  
-    100%{scaleX:(1);}
-}
 
 @keyframes grow {
     0%{width: 0%;}

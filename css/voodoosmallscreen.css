@@ -1,6 +1,26 @@
 @media screen and (max-width: 600px) {
 
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #8dc3e7;
+    border-bottom: 16px solid #e8f167;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    animation: spin 3s linear;
+    animation: spin 2s linear;
+    transform: scale(0);
+    z-index: 1;
+}
 
+@keyframes spin {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+}
+    
 
 * {
     font-family: 'Roboto', sans-serif;
