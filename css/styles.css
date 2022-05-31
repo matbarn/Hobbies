@@ -92,6 +92,7 @@ h4 {
 .split {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .tile_container {
@@ -102,7 +103,7 @@ h4 {
 }
 
 .tiles_heading {
-    font-size: 18px;
+    font-size: 45px;
     color: #50a7e0;
     background-color: #f2f2f2;
     font-weight: bold;
@@ -134,7 +135,7 @@ h4 {
 .tile_name {
     color: #000;
     font-weight: bold;
-    background-color: #f2f2f2a9;
+    background-color: #f2f2f2;
     border-radius: 30px;
     padding-right: 20px;
     padding-left: 20px;
