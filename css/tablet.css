@@ -159,12 +159,9 @@ h4 {
 
 .tile:hover {
     transform: scale(1.01); 
-    box-shadow: 1px 2px 0px 3px #8dc3e7;   
-}
-
-.tile:active {
+    box-shadow: 1px 2px 0px 3px #8dc3e7;
     animation: active-shadow ease-in-out 1ms;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;   
 }
 
 @keyframes active-shadow {
