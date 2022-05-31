@@ -175,13 +175,11 @@ h4 {
 
 .tile:active {
     transform: scale(1.01); 
-    box-shadow: 1px 2px 0px 3px #e8f167;   
+    box-shadow: 1px 2px 0px 3px #e8f167;
+    animation: active-shadow ease-in-out 1ms;
+    animation-fill-mode: forwards;   
 }
 
-.tile:active {
-    animation: active-shadow ease-in-out 1ms;
-    animation-fill-mode: forwards;
-}
 
 @keyframes active-shadow {
     0%{box-shadow: 1px 2px 0px 3px #8dc3e7;}
