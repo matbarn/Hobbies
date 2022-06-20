@@ -97,6 +97,21 @@ h4 {
     width: fit-content;
 }
 
+.tile_name {
+    color: #000;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
 .split {
     display: flex;
     flex-direction: column;
@@ -138,7 +153,7 @@ h4 {
 
 
 .tile:hover {
-    transform: scale(1.5); 
+    /*transform: scale(1.5);*/ 
     box-shadow: 1px 2px 0px 3px #8dc3e7; 
     z-index: 1;  
     animation: active-shadow ease-in-out 600ms;
@@ -179,6 +194,39 @@ h4 {
 }
 
 .tile_name:hover {
+    animation: shadow ease-in-out 1s infinite;
+    animation-fill-mode: forwards;
+    transform: scale(1.1)
+}
+
+@keyframes shadow {
+    0%{box-shadow: 1px 2px 0px 3px #e8f167;}
+    70%{box-shadow: 2px 2px 8px 0px #e8f167;}
+    100%{box-shadow: 1px 2px 0px 3px  #e8f167;}
+}
+
+.tile_name_small {
+    position: relative;
+    color: #000;
+    font-weight: bold;
+    background-color: #8dc3e7;
+    border-radius: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    box-shadow: 2px 2px 8px 0px #acb2b7;
+}
+
+.tile_name_small:hover {
+    box-shadow: 2px 2px 8px 0px #e8f167;
+    transform: scale(1.1) 
+}
+
+.tile_name_small:hover {
     animation: shadow ease-in-out 1s infinite;
     animation-fill-mode: forwards;
     transform: scale(1.1)
